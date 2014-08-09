@@ -49,6 +49,6 @@ promise.retry(process, [onFail], [options]);
 options:
 
 **limit** a number represents for retries limit.  
-**interval** interval (milliseconds) between each retry.  
+**interval** interval (milliseconds) between each retries.  
 **maxInterval** max interval when interval multiplier applied.  
 **intervalMultiplier** the multiplier applies to interval after every retry.  

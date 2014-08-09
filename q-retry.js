@@ -23,10 +23,10 @@ Q().constructor.prototype.retry = function (process, onFail, options) {
         limit = options;
     }
     else if (options && typeof options == 'object') {
-        limit = options.limit || limit;
-        interval = options.interval || interval;
-        maxInterval = options.maxInterval || maxInterval;
-        intervalMultiplier = options.intervalMultiplier || intervalMultiplier;
+        limit = typeof options.limit == 'number' ? options.limit : limit;
+        interval = typeof options.interval == 'number' ? options.interval : interval;
+        maxInterval = typeof options.maxInterval == 'number' ? options.maxInterval : maxInterval;
+        intervalMultiplier = typeof options.intervalMultiplier ? options.intervalMultiplier : intervalMultiplier;
     }
 
     return this.then(function (value) {
