@@ -1,4 +1,4 @@
-﻿# Q-retry v0.1 (based on Q)
+﻿# Q-retry plugin v0.1 for Q
 
 ## Install
 
