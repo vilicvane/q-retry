@@ -26,7 +26,7 @@ Q().constructor.prototype.retry = function (process, onFail, options) {
         limit = typeof options.limit == 'number' ? options.limit : limit;
         interval = typeof options.interval == 'number' ? options.interval : interval;
         maxInterval = typeof options.maxInterval == 'number' ? options.maxInterval : maxInterval;
-        intervalMultiplier = typeof options.intervalMultiplier ? options.intervalMultiplier : intervalMultiplier;
+        intervalMultiplier = typeof options.intervalMultiplier == 'number' ? options.intervalMultiplier : intervalMultiplier;
     }
 
     return this.then(function (value) {
