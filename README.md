@@ -4,6 +4,16 @@
 
 ## Install
 
+**Note**
+
+Q-retry set Q as [peer dependency](http://blog.nodejs.org/2013/02/07/peer-dependencies/),
+it will add retry method directly to the same Q you were working with,
+but will not add retry to the nested Q module of other modules and its instance.
+
+So make sure the promise you want to use retry on is created or wrapped by non-nested Q module.
+(Currently simply Q(promise) will return the original Q promise directly,
+I have created a pull request https://github.com/kriskowal/q/pull/566 and hope they will have it merged.)
+
 ```
 npm install q-retry
 ```
